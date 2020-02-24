@@ -13,25 +13,42 @@ A new contributor is someone who did a commit for the first time in a repository
 ### 1. Homework
 Build a **straightforward** application able to fetch data from GitHub API in a reliable and efficient way. You'll need to handle GitHub API errors and rate limit so that calls are retried properly.
 
-Store the fetched data in a storage system of your choice (in-memory, filesystem, database, ...) and expose a HTTP JSON API delivering the results. The format of the API is the following:
+Store the fetched data in a storage system of your choice (in-memory, filesystem, database, ...) and expose a HTTP JSON API delivering the results. The format of the API is the following (example with Facebook):
 
 ```json
-//GET `/facebook/reactjs/2019`
+//GET `/facebook/react/2019`
 {
     "org": "Facebook",
-    "repository": "reactjs", 
+    "repository": "react", 
     "year": "2019",
+    "newContributors": ...,
+}
+
+//GET `/facebook/jest/2018`
+{
+    "org": "Facebook",
+    "repository": "jest", 
+    "year": "2018",
     "newContributors": ...,
 }
 ```
 
 ```json
-//GET `/facebook/reactjs/2019/06`
+//GET `/facebook/react/2019/06`
 {
     "org": "Facebook",
-    "repository": "reactjs",
+    "repository": "react",
     "year": "2019",
     "month": "06",
+    "newContributors": ...,
+}
+
+//GET `/facebook/jest/2018/03`
+{
+    "org": "Facebook",
+    "repository": "jest",
+    "year": "2018",
+    "month": "03",
     "newContributors": ...,
 }
 ```
