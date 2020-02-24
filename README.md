@@ -16,7 +16,7 @@ Build a **straightforward** application able to fetch data from GitHub API in a 
 Store the fetched data in a storage system of your choice (in-memory, filesystem, database, ...) and expose a HTTP JSON API delivering the results. The format of the API is the following (example with Facebook):
 
 ```json
-//GET `/facebook/react/2019`
+//GET /facebook/react/2019
 {
     "org": "Facebook",
     "repository": "react", 
@@ -24,7 +24,7 @@ Store the fetched data in a storage system of your choice (in-memory, filesystem
     "newContributors": ...,
 }
 
-//GET `/facebook/jest/2018`
+//GET /facebook/jest/2018
 {
     "org": "Facebook",
     "repository": "jest", 
@@ -34,7 +34,7 @@ Store the fetched data in a storage system of your choice (in-memory, filesystem
 ```
 
 ```json
-//GET `/facebook/react/2019/06`
+//GET /facebook/react/2019/06
 {
     "org": "Facebook",
     "repository": "react",
@@ -43,7 +43,7 @@ Store the fetched data in a storage system of your choice (in-memory, filesystem
     "newContributors": ...,
 }
 
-//GET `/facebook/jest/2018/03`
+//GET /facebook/jest/2018/03
 {
     "org": "Facebook",
     "repository": "jest",
